@@ -8,4 +8,4 @@ generate_export_header (hellolib          # generates the export header shared_E
     EXPORT_FILE_NAME ${CMAKE_CURRENT_SOURCE_DIR}/../../inc/shared_EXPORTS.h
     STATIC_DEFINE hellolib_EXPORTS_BUILT_AS_STATIC)
 
-install (TARGETS hellolib RUNTIME DESTINATION bin COMPONENT libraries)
+install (TARGETS hellolib LIBRARY DESTINATION bin RUNTIME DESTINATION bin COMPONENT libraries)
