@@ -1,9 +1,8 @@
-#ifndef HELLOLIB_H
-#define HELLOLIB_H
+#include "shared_EXPORTS.h"
 
-void printlib();
+void shared_EXP printlib();
 
-#endif
+
 
 
 
