@@ -23,8 +23,7 @@ IF (WIN32)
    INSTALL(FILES C:/Qt/Qt5.9.2/5.9.2/msvc2015/bin/Qt5Core.dll
                  C:/Qt/Qt5.9.2/5.9.2/msvc2015/bin/Qt5Widgets.dll
                  C:/Qt/Qt5.9.2/5.9.2/msvc2015/bin/Qt5Gui.dll
-                 LIBRARY DESTINATION bin
-                 RUNTIME DESTINATION bin
+                 DESTINATION bin
                  COMPONENT libraries)
 ELSE()
    #INSTALL(FILES /home/kh/Qt5.9/5.9.1/gcc64/bin/Qt5Core.dll C:/Qt/Qt5.9.2/5.9.2/msvc2015/bin/Qt5Widgets.dll C:/Qt/Qt5.9.2/5.9.2/msvc2015/bin/Qt5Gui.dll)
