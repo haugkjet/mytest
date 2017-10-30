@@ -42,6 +42,7 @@ ELSE()
 ENDIF()
 
 if (NDDS_LIB1 AND NDDS_LIB2  AND NDDS_LIB3)
+
    target_link_libraries (hellolib ${NDDS_LIB1} ${NDDS_LIB2} ${NDDS_LIB3})
    message ("NDDS found")
 else ()
