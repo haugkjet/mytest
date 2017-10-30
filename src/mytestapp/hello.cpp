@@ -30,5 +30,6 @@ int main(int argc, char *argv[])
      std::cout << "Hello World" << std::endl;
      std::cout << "Using Library Hello World Lib" << std::endl;
      printlib();
+     initNDDS();
      return app.exec();
 }
