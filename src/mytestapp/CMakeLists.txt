@@ -17,4 +17,11 @@ add_executable(mytest hello.cpp ../../inc/hellolib.h ../../inc/shared_EXPORTS.h)
 find_library (hellolib ../mytestlib)
 target_link_libraries (mytest hellolib Qt5::Widgets)
 
+IF (WIN32)
+   INSTALL(FILES RUNTIME C:/Qt/Qt5.9.2/5.9.2/msvc2015/bin/Qt5Core.dll C:/Qt/Qt5.9.2/5.9.2/msvc2015/bin/Qt5Widgets.dll C:/Qt/Qt5.9.2/5.9.2/msvc2015/bin/Qt5Gui.dll DESTINATION bin)
+ELSE()
+   #INSTALL(FILES /home/kh/Qt5.9/5.9.1/gcc64/bin/Qt5Core.dll C:/Qt/Qt5.9.2/5.9.2/msvc2015/bin/Qt5Widgets.dll C:/Qt/Qt5.9.2/5.9.2/msvc2015/bin/Qt5Gui.dll)
+ENDIF()
+
+
 install (TARGETS mytest RUNTIME DESTINATION bin COMPONENT applications)
