@@ -4,7 +4,7 @@ void shared_EXP printlib();
 
 int shared_EXP getnumberfromlib();
 
-int shared_EXP initNDDS();
+void shared_EXP initNDDS();
 
 
 

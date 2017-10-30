@@ -15,7 +15,7 @@ int shared_EXP getnumberfromlib()
    return 5;
 }
 
-int shared_EXP initNDDS()
+void shared_EXP initNDDS()
 {
     DDS_ReturnCode_t         rc;
     DDSDomainParticipant *   participant = NULL;
