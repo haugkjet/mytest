@@ -9,17 +9,19 @@ ENDIF()
 
 
 find_package(Qt5Widgets)
-
+find_package(Qt5Qml)
 
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
 qt5_wrap_ui(UI_HEADERS mainwindow.ui)
-add_executable(mytest hello.cpp mainwindow.cpp ../../inc/mainwindow.h ../../inc/hellolib.h ../../inc/shared_EXPORTS.h ${UI_HEADERS})
+qt5_add_resources(UI_RESOURCES hello.qrc)
+
+add_executable(mytest hello.cpp mainwindow.cpp ../../inc/mainwindow.h ../../inc/hellolib.h ../../inc/shared_EXPORTS.h ${UI_HEADERS} ${UI_RESOURCES})
 
 find_library (hellolib ../mytestlib)
-target_link_libraries (mytest hellolib Qt5::Widgets)
+target_link_libraries (mytest hellolib Qt5::Widgets Qt5::Qml)
 
 install (TARGETS mytest RUNTIME DESTINATION bin COMPONENT applications)
 
@@ -29,12 +31,14 @@ IF (WIN32)
    INSTALL(FILES C:/Qt/Qt5.9.2/5.9.2/msvc2015_64/bin/Qt5Core.dll
                  C:/Qt/Qt5.9.2/5.9.2/msvc2015_64/bin/Qt5Widgets.dll
                  C:/Qt/Qt5.9.2/5.9.2/msvc2015_64/bin/Qt5Gui.dll
+                 C:/Qt/Qt5.9.2/5.9.2/msvc2015_64/bin/Qt5Qml.dll
                  DESTINATION bin
                  COMPONENT libraries)
 ELSE()
    INSTALL(FILES /home/kh/Qt5.9/5.9.1/gcc64/lib/libQt5Widgets.so
                  /home/kh/Qt5.9/5.9.1/gcc64/lib/libQt5Core.so
                  /home/kh/Qt5.9/5.9.1/gcc64/lib/libQt5Gui.so
+                 /home/kh/Qt5.9/5.9.1/gcc64/lib/libQt5Qml.so
                  DESTINATION bin
                  COMPONENT libraries)
 ENDIF()
