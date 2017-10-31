@@ -23,9 +23,9 @@ install (TARGETS mytest RUNTIME DESTINATION bin COMPONENT applications)
 
 #TODO: no hardcoding
 IF (WIN32)
-   INSTALL(FILES C:/Qt/Qt5.9.2/5.9.2/msvc2015_64/bin/Qt5Cored.dll
-                 C:/Qt/Qt5.9.2/5.9.2/msvc2015_64/bin/Qt5Widgetsd.dll
-                 C:/Qt/Qt5.9.2/5.9.2/msvc2015_64/bin/Qt5Guid.dll
+   INSTALL(FILES C:/Qt/Qt5.9.2/5.9.2/msvc2015_64/bin/Qt5Core.dll
+                 C:/Qt/Qt5.9.2/5.9.2/msvc2015_64/bin/Qt5Widgets.dll
+                 C:/Qt/Qt5.9.2/5.9.2/msvc2015_64/bin/Qt5Gui.dll
                  DESTINATION bin
                  COMPONENT libraries)
 ELSE()

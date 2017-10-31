@@ -20,9 +20,9 @@ IF (WIN32)
     include_directories ("C:/Program\ Files/rti_connext_dds-5.2.3/include")
     include_directories ("C:/Program\ Files/rti_connext_dds-5.2.3/include/ndds")
 
-    INSTALL(FILES "C:/Program\ Files/rti_connext_dds-5.2.3/lib/x64Win64VS2015/nddscd.dll"
-                  "C:/Program\ Files/rti_connext_dds-5.2.3/lib/x64Win64VS2015/nddscppd.dll"
-                  "C:/Program\ Files/rti_connext_dds-5.2.3/lib/x64Win64VS2015/nddscored.dll"
+    INSTALL(FILES "C:/Program\ Files/rti_connext_dds-5.2.3/lib/x64Win64VS2015/nddsc.dll"
+                  "C:/Program\ Files/rti_connext_dds-5.2.3/lib/x64Win64VS2015/nddscpp.dll"
+                  "C:/Program\ Files/rti_connext_dds-5.2.3/lib/x64Win64VS2015/nddscore.dll"
                  DESTINATION bin
                  COMPONENT libraries)
 ELSE()
