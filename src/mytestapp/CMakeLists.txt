@@ -10,16 +10,19 @@ ENDIF()
 
 find_package(Qt5Widgets)
 
+
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
-add_executable(mytest hello.cpp ../../inc/hellolib.h ../../inc/shared_EXPORTS.h)
+qt5_wrap_ui(UI_HEADERS mainwindow.ui)
+add_executable(mytest hello.cpp mainwindow.cpp ../../inc/mainwindow.h ../../inc/hellolib.h ../../inc/shared_EXPORTS.h ${UI_HEADERS})
 
 find_library (hellolib ../mytestlib)
 target_link_libraries (mytest hellolib Qt5::Widgets)
 
 install (TARGETS mytest RUNTIME DESTINATION bin COMPONENT applications)
+
 
 #TODO: no hardcoding
 IF (WIN32)

@@ -2,6 +2,7 @@
 #include <QApplication>
 #include <QLabel>
 #include "../../inc/hellolib.h"
+#include "../../inc/mainwindow.h"
 
 #include <QApplication>
 #include <QHBoxLayout>
@@ -29,7 +30,12 @@ int main(int argc, char *argv[])
      window->show();
      std::cout << "Hello World" << std::endl;
      std::cout << "Using Library Hello World Lib" << std::endl;
+
+     MainWindow w;
+     w.show();
+
      printlib();
      initNDDS();
      return app.exec();
 }
+
