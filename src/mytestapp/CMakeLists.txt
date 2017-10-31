@@ -2,7 +2,7 @@
 #TODO: no hardcoding
 
 IF (WIN32)
-   set(CMAKE_PREFIX_PATH "C:/Qt/Qt5.9.2/5.9.2/msvc2015")
+   set(CMAKE_PREFIX_PATH "C:/Qt/Qt5.9.2/5.9.2/msvc2015_64")
 ELSE()
    set(CMAKE_PREFIX_PATH "/home/kh/Qt5.9/5.9.1/gcc_64")
 ENDIF()
@@ -23,9 +23,9 @@ install (TARGETS mytest RUNTIME DESTINATION bin COMPONENT applications)
 
 #TODO: no hardcoding
 IF (WIN32)
-   INSTALL(FILES C:/Qt/Qt5.9.2/5.9.2/msvc2015/bin/Qt5Core.dll
-                 C:/Qt/Qt5.9.2/5.9.2/msvc2015/bin/Qt5Widgets.dll
-                 C:/Qt/Qt5.9.2/5.9.2/msvc2015/bin/Qt5Gui.dll
+   INSTALL(FILES C:/Qt/Qt5.9.2/5.9.2/msvc2015_64/bin/Qt5Cored.dll
+                 C:/Qt/Qt5.9.2/5.9.2/msvc2015_64/bin/Qt5Widgetsd.dll
+                 C:/Qt/Qt5.9.2/5.9.2/msvc2015_64/bin/Qt5Guid.dll
                  DESTINATION bin
                  COMPONENT libraries)
 ELSE()
