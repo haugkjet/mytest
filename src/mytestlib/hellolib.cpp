@@ -2,7 +2,7 @@
 
 #include "../../inc/shared_EXPORTS.h"
 
-#include "ndds_cpp.h"
+/*#include <ndds_cpp.h>*/
 
 void shared_EXP printlib()
 {
@@ -17,7 +17,7 @@ int shared_EXP getnumberfromlib()
 
 void shared_EXP initNDDS()
 {
-    DDS_ReturnCode_t         rc;
+ /*   DDS_ReturnCode_t         rc;
     DDSDomainParticipant *   participant = NULL;
     DDSTopic *               topic = NULL;
 
@@ -37,7 +37,7 @@ void shared_EXP initNDDS()
             0,
             DDS_PARTICIPANT_QOS_DEFAULT,
             NULL,   /* Listener */
-            DDS_STATUS_MASK_NONE);
+          /*  DDS_STATUS_MASK_NONE);
 
     if (participant == NULL) {
         std::cerr << "! Unable to create DDS domain participant" << std::endl;
@@ -45,5 +45,5 @@ void shared_EXP initNDDS()
     else
     {
         std::cout << "Participant OK." << std::endl;
-    }
+    }*/
 }
