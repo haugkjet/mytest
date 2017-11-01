@@ -3,6 +3,8 @@
 #include "QDebug"
 #include "cmath"
 
+# define M_PI2		3.14159265358979323846
+
 class GLWidget : public QGLWidget{
     void initializeGL(){
         /// In modelview hand is at origin   
@@ -10,7 +12,7 @@ class GLWidget : public QGLWidget{
     }
     
     void qgluPerspective(GLdouble fovy, GLdouble aspect, GLdouble zNear, GLdouble zFar){
-        const GLdouble ymax = zNear * tan(fovy * M_PI / 360.0);
+        const GLdouble ymax = zNear * tan(fovy * M_PI2 / 360.0);
         const GLdouble ymin = -ymax;
         const GLdouble xmin = ymin * aspect;
         const GLdouble xmax = ymax * aspect;
