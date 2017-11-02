@@ -1,5 +1,6 @@
-add_subdirectory (mytestlib)
-add_subdirectory (mytestapp)
-add_subdirectory (helloqml)
-add_subdirectory (hellogl)
-
+add_subdirectory (rdsnddslib)
+add_subdirectory (rdsgenlib)
+add_subdirectory (rdsqtwidget)
+add_subdirectory (rdsqtqml)
+add_subdirectory (rdsgl)
+add_subdirectory (rdsconsole)

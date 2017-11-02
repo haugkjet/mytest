@@ -1,4 +1,4 @@
-project(untitled13 LANGUAGES CXX)
+project(rdsqtqml LANGUAGES CXX)
 
 IF (WIN32)
    set(CMAKE_PREFIX_PATH "C:/Qt/Qt5.9.2/5.9.2/msvc2015_64")

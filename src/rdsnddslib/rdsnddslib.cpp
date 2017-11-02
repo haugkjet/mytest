@@ -1,19 +1,8 @@
 #include <iostream>
 
-#include "../../inc/shared_EXPORTS.h"
+#include "../../inc/rdsnddslib_EXPORTS.h"
 
 /*#include <ndds_cpp.h>*/
-
-void shared_EXP printlib()
-{
-
-    std::cout << "Print Lib4" << std::endl;
-}
-
-int shared_EXP getnumberfromlib()
-{
-   return 5;
-}
 
 void shared_EXP initNDDS()
 {
@@ -46,4 +35,5 @@ void shared_EXP initNDDS()
     {
         std::cout << "Participant OK." << std::endl;
     }*/
+    std::cout << "rdsnddslib initNDDS function" << std::endl;
 }

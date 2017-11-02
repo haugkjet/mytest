@@ -16,14 +16,23 @@ set(CMAKE_AUTOUIC ON)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
 qt5_wrap_ui(UI_HEADERS mainwindow.ui)
-qt5_add_resources(UI_RESOURCES hello.qrc)
+qt5_add_resources(UI_RESOURCES rdsqtwidget.qrc)
 
-add_executable(mytest hello.cpp mainwindow.cpp ../../inc/mainwindow.h ../../inc/hellolib.h ../../inc/shared_EXPORTS.h ${UI_HEADERS} ${UI_RESOURCES})
+add_executable(rdsqtwidget
+               rdsqtwidget.cpp
+               mainwindow.cpp
+               mainwindow.h
+               ../../inc/rdsnddslib.h
+               ../../inc/rdsnddslib_EXPORTS.h
+               ../../inc/rdsgenlib_EXPORTS.h
+               ${UI_HEADERS} ${UI_RESOURCES})
 
-find_library (hellolib ../mytestlib)
-target_link_libraries (mytest hellolib Qt5::Widgets Qt5::Qml)
+find_library (rdsnddslib ../rdsnddslib)
+find_library (rdsgenlib ../rdsgenlib)
 
-install (TARGETS mytest RUNTIME DESTINATION bin COMPONENT applications)
+target_link_libraries (rdsqtwidget rdsnddslib rdsgenlib Qt5::Widgets Qt5::Qml)
+
+install (TARGETS rdsqtwidget RUNTIME DESTINATION bin COMPONENT applications)
 
 
 #TODO: no hardcoding

@@ -1,4 +1,4 @@
-project(qt5test)
+project(rdsgltest)
 cmake_minimum_required(VERSION 2.8.12)
 IF (WIN32)
    set(CMAKE_PREFIX_PATH "C:/Qt/Qt5.9.2/5.9.2/msvc2015_64")
@@ -17,6 +17,6 @@ set(CMAKE_AUTOMOC ON)
 find_package(OpenGL)
 
 # executable
-add_executable(qt5test main.cpp)
-qt5_use_modules(qt5test Widgets OpenGL)
-target_link_libraries(qt5test ${QT_LIBRARIES} ${OPENGL_LIBRARIES})
+add_executable(rdsgltest main.cpp)
+qt5_use_modules(rdsgltest Widgets OpenGL)
+target_link_libraries(rdsgltest ${QT_LIBRARIES} ${OPENGL_LIBRARIES})

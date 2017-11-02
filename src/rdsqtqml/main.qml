@@ -6,7 +6,7 @@ ApplicationWindow {
     visible: true
     width: 640
     height: 480
-    title: qsTr("Hello World")
+    title: qsTr("rdsqtqml")
 
     SwipeView {
         id: swipeView
@@ -18,7 +18,7 @@ ApplicationWindow {
 
         Page {
             Label {
-                text: qsTr("Second page")
+                text: qsTr("Sensors")
                 anchors.centerIn: parent
             }
         }
@@ -28,10 +28,10 @@ ApplicationWindow {
         id: tabBar
         currentIndex: swipeView.currentIndex
         TabButton {
-            text: qsTr("First")
+            text: qsTr("Logs")
         }
         TabButton {
-            text: qsTr("Second")
+            text: qsTr("Sensors")
         }
     }
 }

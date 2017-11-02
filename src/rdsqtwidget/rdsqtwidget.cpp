@@ -1,8 +1,9 @@
 #include <iostream>
 #include <QApplication>
 #include <QLabel>
-#include "../../inc/hellolib.h"
-#include "../../inc/mainwindow.h"
+#include "../../inc/rdsnddslib.h"
+#include "../../inc/rdsgenlib.h"
+#include "mainwindow.h"
 
 #include <QApplication>
 #include <QHBoxLayout>
@@ -29,7 +30,7 @@ int main(int argc, char *argv[])
      window->setLayout(layout);
      window->show();
      std::cout << "Hello World" << std::endl;
-     std::cout << "Using Library Hello World Lib" << std::endl;
+     std::cout << "Using Library rdsndds" << std::endl;
 
      MainWindow w;
      w.show();
